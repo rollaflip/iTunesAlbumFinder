@@ -16,12 +16,12 @@ export default class AlbumList extends Component {
       return (
         <div>
           <div>in AlbumList</div>
-          <ul>
+          <ul >
           {albums.map(album => {
             return (
               <li key={album.collectionId}>
                 <div>{album.collectionName}</div>
-                <div>{album.artworkUrl60}</div>
+                <div><img src={album.artworkUrl60} alt="" /></div>
                 <div>{album.collectionPrice}</div>
               </li>
             );
