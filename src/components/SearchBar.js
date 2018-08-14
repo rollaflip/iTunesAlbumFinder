@@ -18,12 +18,12 @@ export default class SearchBar extends Component {
     });
   };
 
-  handleSubmit = (evt) => {
+  handleSubmit = async (evt) => {
     evt.preventDefault()
     console.log(this.state.term, '@@ name on state @@')
     let searchTerm = this.state.term
 
-    let albumsFromAPI = getAlbumsByArtist(searchTerm);
+    let albumsFromAPI = await getAlbumsByArtist(searchTerm);
     console.log(`request sent to iTunes!`)
     this.setState({
       term: '',
