@@ -3,7 +3,7 @@ let axios = require('axios');
 
 const albumsFromItunes = 'https://itunes.apple.com/search?term=';
 let typeFilter = '&entity=album'
-let searchLimit = '&limit=25'
+let searchLimit = '&limit=50'
 
   const getAlbumsByArtist = (artist) => {
     let encodedArtist = encodeURIComponent(artist);

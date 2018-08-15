@@ -1,0 +1,15 @@
+#buy {
+  /*border-radius*/
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  color: #fff;
+  font-weight: light;
+  border: 1px solid #ccc;
+  padding: 5px 15px;
+}
+
+.divSpace {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
