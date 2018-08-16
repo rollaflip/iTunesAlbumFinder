@@ -1,3 +1,52 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding-top: 35px;
+  padding-bottom: 12px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+
+.brightness {
+  background-color: white;
+  display: inline-block;
+}
+.brightness img:hover {
+  opacity: 0.85;
+}
+
 #buy {
   /*border-radius*/
   -webkit-border-radius: 15px;
@@ -8,8 +57,12 @@
   border: 1px solid #ccc;
   padding: 5px 15px;
 }
+.centerTheText {
+  text-align: 'center';
+}
 
-.divSpace {
-  padding-top: 10px;
+.searchBarStyle {
+  padding-top: 0px;
   padding-bottom: 20px;
+  text-align: center;
 }

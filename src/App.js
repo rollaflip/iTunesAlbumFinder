@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
-import SearchBar from './components/SearchBar';
-import style from './'
+import './style.css';
+import SearchBar from './components/Search';
 
 class App extends Component {
   render() {

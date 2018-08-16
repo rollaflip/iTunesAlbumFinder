@@ -1,23 +1,22 @@
 import React, { Component } from 'react';
-import Grid from '@material-ui/core/Grid';
-import {
-  Card,
-  CardActions,
-  CardHeader,
-  CardMedia,
-  CardTitle,
-  CardText,
-} from 'material-ui/Card';
-import FlatButton from 'material-ui/FlatButton';
+import {Grid} from '@material-ui/core';
+import '../style.css';
 
 export default class AlbumList extends Component {
   constructor(props) {
     super(props);
     this.state = {
       albums: this.props.albums,
+      hiddenTitle:""
     };
   }
 
+abbreviate = (str)=>{
+  if(str.length >= 40){
+    return str.slice(0,40).concat('...')
+  }
+  return str
+}
   render() {
     let { albums, prevTerm } = this.props;
 
@@ -25,42 +24,50 @@ export default class AlbumList extends Component {
     if (albums.length > 0) {
       return (
         <div>
-          {/* <div>in AlbumList</div> */}
           <Grid
+            className="albumGrid"
             container
             direction="row"
             // justify="center"
             // alignItems="center"
-            spacing={16}
+            spacing={0}
+          >
+            <Grid item sm >
+
+            </Grid>
+          </Grid>
+          <Grid
+            className="albumGrid"
+            container
+            direction="row"
+            // justify="center"
+            // alignItems="center"
+            spacing={0}
           >
             {albums.map(album => {
               return (
                 <Grid
                   item
-                  xs
-                  container
+                  sm
+                  // container
                   direction="column"
-                  // padding={6}
-                  spacing={8}
                   key={album.collectionId}
-                  // space-around={10}
                 >
-                  <div>
+                  <div className="brightness">
                     <img
                       src={album.artworkUrl100.replace('100x100', '200x200')}
                       alt=""
                     />
                   </div>
-                  <div>{album.collectionName}</div>
-                  {/* <div>{album.collectionPrice}</div> */}
+                  <div>{this.abbreviate(album.collectionName)}</div>
                 </Grid>
               );
             })}
           </Grid>
         </div>
       );
-    } else if (prevTerm.length) {
-      return <div> Sorry no results for ${prevTerm}, please try again</div>;
+    } if (prevTerm.length) {
+      return <div> Sorry, no results for "{prevTerm}", please try again</div>;
     } else {
       return null;
     }
