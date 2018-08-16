@@ -16,7 +16,7 @@ Launch server in your broswer
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-![Preview1](./public/screenShot.PNG)
+![Preview1](./public/screenShot.png)
 
 ## Built With:
 * Javascript ES6
