@@ -3,7 +3,7 @@
 
 iTunes Album Finder performs Axios requests via the iTunes API and displays albums by artist.
 
-###To run iTunes Album Finder in your browser:
+#To run iTunes Album Finder in your browser:
 Install dependencies via npm
 ```
 `npm install`
@@ -18,7 +18,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ![Preview1](./public/screenShot.PNG)
 
-##Built With:
+## Built With:
 * Javascript ES6
 * React
 * Styled w/ Material UI/ CSS Classes
