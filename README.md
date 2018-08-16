@@ -1,8 +1,8 @@
 # iTunes Album Finder
 ## By Ian Knepper
 
-iTunes Album Finder performs Axios requests via the iTunes API and displays albums by artist.
-Album grid is responsive to window size.
+iTunes Album Finder performs Axios requests via the iTunes API and displays albums by artist.<br>
+The album grid is responsive to window size.
 
 # To run iTunes Album Finder in your browser:
 Install dependencies via npm
