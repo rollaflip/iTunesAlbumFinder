@@ -28,8 +28,6 @@ abbreviate = (str)=>{
             className="albumGrid"
             container
             direction="row"
-            // justify="center"
-            // alignItems="center"
             spacing={0}
           >
             <Grid item sm >
@@ -40,8 +38,6 @@ abbreviate = (str)=>{
             className="albumGrid"
             container
             direction="row"
-            // justify="center"
-            // alignItems="center"
             spacing={0}
           >
             {albums.map(album => {
@@ -49,7 +45,6 @@ abbreviate = (str)=>{
                 <Grid
                   item
                   sm
-                  // container
                   direction="column"
                   key={album.collectionId}
                 >

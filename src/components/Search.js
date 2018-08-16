@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import '../style.css';
 import getAlbumsByArtist from './iTunesApiFetch'
 import AlbumList from './AlbumList';
-import {Button, TextField, Input} from '@material-ui/core'
-// import { faFreebsd } from '@fontawesome/free-brands-svg-icons'
+import {Input} from '@material-ui/core'
 
 
 export default class SearchBar extends Component {
@@ -27,7 +26,6 @@ export default class SearchBar extends Component {
   handleSubmit = async (evt) => {
     evt.preventDefault()
     console.log(this.state.term, '@@ name on state @@')
-    // let previousTerm = this.state.prevTerm
     let searchTerm = this.state.term
 
     if(searchTerm.length){
@@ -36,7 +34,6 @@ export default class SearchBar extends Component {
       console.log(`request sent to iTunes!`)
       this.setState({
         prevTerm: searchTerm,
-        // term: '',
         albumsArray: albumsFromAPI
       })
       console.log(this.state.albumsArray, '### Handle Sumbit ###')
@@ -49,18 +46,15 @@ export default class SearchBar extends Component {
         <div className="searchBarStyle">
           <p>Enter Artist Name:</p>
 
-          <form className="container-1" onSubmit={this.handleSubmit} className="searchBarStyle">
-
+          <form onSubmit={this.handleSubmit} className="searchBarStyle">
 
             <Input
-            autoComplete="off"
-
+              autoComplete="off"
               type="search"
               onChange={this.handleChange}
               name="artistName"
               ref="artistName"
-              style ={{width: '25%'}}
-              // inputStyle ={{width: '33%'}}
+              style ={{width: '18%'}}
               placeholder = "Search for Albums by Artist"
             />
 
