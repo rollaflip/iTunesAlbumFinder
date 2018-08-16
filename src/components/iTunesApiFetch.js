@@ -8,15 +8,13 @@ const getAlbumsByArtist = artist => {
   let encodedArtist = encodeURIComponent(artist);
   let itunesURL = `${albumsFromItunes}${encodedArtist}${typeFilter}${searchLimit}`;
 
-  return axios.get(itunesURL).then(
-    res => {
-      if (res.data) {
-        let albums = res.data.results;
-        return albums;
-      } else {
-        throw new Error(res.data.message);
-      }
+  return axios.get(itunesURL).then(res => {
+    if (res.data) {
+      let albums = res.data.results;
+      return albums;
+    } else {
+      throw new Error(res.data.message);
     }
-  );
+  });
 };
 export default getAlbumsByArtist;
